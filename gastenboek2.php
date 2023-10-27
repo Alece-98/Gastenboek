@@ -23,7 +23,7 @@
     }
 
     function displayGuestbook($fileInput): void {
-        $output = "<aside>";
+        $output = "";
         foreach ($fileInput as $guestMessage) {
             $output .= "<article>";
             $output .= "<h2>";
@@ -34,7 +34,6 @@
             $output .= "</p>";
             $output .= "</article>";
         }
-        $output .= "</aside>";
         echo $output;
     }
 ?>

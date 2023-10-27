@@ -13,11 +13,15 @@
         <title>Gastenboek</title>
     </head>
     <body>
+        <main>
         <form method="post">
             Naam :<input type="text" name="name" required><br>
             <textarea type="textarea" name="textarea" required></textarea>
             <input type="submit">
         </form>
-        <?php displayGuestbook($decoded); ?>
+        <aside>
+            <?php displayGuestbook($decoded); ?>
+        </aside>
+        </main>
     </body>
 </html> 
