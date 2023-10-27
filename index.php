@@ -14,14 +14,19 @@
     </head>
     <body>
         <main>
-        <form method="post">
-            Naam :<input type="text" name="name" required><br>
-            <textarea type="textarea" name="textarea" required></textarea>
-            <input type="submit">
-        </form>
-        <aside>
-            <?php displayGuestbook($decoded); ?>
-        </aside>
+            <form method="post">
+                <label>Naam :
+                    <input type="text" name="name" required />
+                </label><br>
+                <label>
+                    bericht :
+                    <textarea type="textarea" name="textarea" required></textarea>
+                </label>
+                <button type="submit">Verstuur bericht</button>
+            </form>
+            <aside>
+                <?php displayGuestbook($decoded); ?>
+            </aside>
         </main>
     </body>
 </html> 
