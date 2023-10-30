@@ -1,28 +1,39 @@
-<html>
-<body>
-
-<form method="post">
-Naam :<input type="text" name="name"><br>
-<textarea type="textarea" name="textarea"></textarea>
-<input type="submit">
-</form>
-
-</body>
-</html> 
-
 <?php 
-    $file = 'guestbook.json';
-    $text = file_get_contents($file, true);
-    $fileInput = json_decode($text, true);
-    $nameInput = htmlspecialchars($_POST['name']); 
-    $messageInput = $_POST['textarea'];
-//    If fill empty put 2 brackets in then circle back
-    $nameAndMessage = array ("naam" => $nameInput, "message" => $messageInput);
-    array_push($fileInput,$nameAndMessage);
+    declare(strict_types = 1); 
+    define("FILE", 'guestbook.json');
 
+    function openFile(): array {
+        $text = file_get_contents(FILE, true);
+        if (empty($text)) $text = "[]";
+        // If file empty put 2 brackets in then circle back
+        return json_decode($text, true);
+    }
 
-    $encode = json_encode($fileInput);
-    file_put_contents($file, $encode);
-    echo $encode;
+    function createPost($fileInput): array {
+        $nameInput = htmlspecialchars($_POST['name']); 
+        $messageInput = htmlspecialchars($_POST['textarea']);
+    
+        $nameAndMessage = array("name" => $nameInput, "message" => $messageInput);
+        array_push($fileInput,$nameAndMessage);
+    
+        $encode = json_encode($fileInput);
+        file_put_contents(FILE, $encode);
+        
+        return $fileInput;
+    }
 
+    function displayGuestbook($fileInput): void {
+        $output = "";
+        foreach ($fileInput as $guestMessage) {
+            $output .= "<article>";
+            $output .= "<h2>";
+            $output .= $guestMessage["name"];
+            $output .= "</h2>";
+            $output .= "<p>";
+            $output .= $guestMessage["message"];
+            $output .= "</p>";
+            $output .= "</article>";
+        }
+        echo $output;
+    }
 ?>
