@@ -2,6 +2,9 @@
     declare(strict_types = 1);
     include("./gastenboek2.php");
     $decoded = openFile();
+    if (isset($_POST["remove"])) {
+        removePost();
+    }
     if (isset($_POST["name"]) && isset($_POST["textarea"])) {
         $decoded = createPost($decoded);
     }
