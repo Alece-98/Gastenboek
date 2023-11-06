@@ -1,35 +1,17 @@
 <?php
     declare(strict_types = 1);
-    include("./gastenboek2.php");
-    $decoded = openFile();
-    if (isset($_POST["remove"])) {
-        removePost();
-    }
-    if (isset($_POST["name"]) && isset($_POST["textarea"])) {
-        $decoded = createPost($decoded);
-    }
-?>
+    include("./classes.php");
 
-<!DOCTYPE html>
-<html lang="nl">
-    <head>
-        <title>Gastenboek</title>
-    </head>
-    <body>
-        <main>
-            <form method="post">
-                <label>Naam :
-                    <input type="text" name="name" required />
-                </label><br>
-                <label>
-                    bericht :
-                    <textarea type="textarea" name="textarea" required></textarea>
-                </label>
-                <button type="submit">Verstuur bericht</button>
-            </form>
-            <aside>
-                <?php displayGuestbook($decoded); ?>
-            </aside>
-        </main>
-    </body>
-</html> 
+    $guestbook = new GuestBook();
+    
+    if (isset($_POST["name"]) && isset($_POST["comment"])) {
+        $guestbook->createMessage($_POST["name"], $_POST["comment"]);
+    }
+
+    if (isset($_POST["remove"])) {
+        $guestbook->deleteMessage();
+    }
+
+    echo $guestbook->displayPage();
+
+?>
