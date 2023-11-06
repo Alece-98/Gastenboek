@@ -4,13 +4,23 @@
         public string $comment;
         public string $id;
 
+        private function addDeleteButton(): string {
+            // rename session key when login is implemented
+            if (isset($_SESSION["admin"])) {
+                $template = file_get_contents("./templates/deleteButton.html", true);
+                return str_replace("{id}", $this->id, $template);
+            }
+            
+            return "";
+        }
+
         public function displayMessage(): string
         {
-            $replace = array("{name}", "{comment}", "{id}");
+            $replace = array("{name}", "{comment}", "{deleteButton}");
             $values = array(
                 $this->name,
                 $this->comment,
-                $this->id
+                $this->addDeleteButton()
             );
             $template = file_get_contents("./templates/message.html", true);
 
