@@ -1,0 +1,215 @@
+body, html {
+    height: 100%;
+    background-image: url("images/background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+main{
+
+    margin: -20px -10px -20px -10px;
+    padding: 10px 0 40px 0;
+    width: 101.9%;
+    height: 90%;
+}
+header {
+    background-image: url("images/bluebackground.jpg");
+    /* background-color: rgba(55, 55, 179, 0.882); */
+    margin: 5px -8px 20px -10px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 5px;
+    border-bottom: solid 2px #000080;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    position:fixed;
+    width: 100%;
+}
+#navidiv {
+    display: inline-flex;
+    /* justify-content: space-around; */
+    flex-direction: row;
+}
+#guestbook {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    background-image: linear-gradient(to left, #B38728, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+nav > button {
+    border: solid 2px transparent;
+    border-image: linear-gradient(to right, #B38728, #B38728, #FBF5B7, #AA771C) 1;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 100px;
+    font-size: 12px;
+    width: 11%;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.853);
+    background-image: linear-gradient(to left, #B38728, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+}
+nav > button:hover {
+    opacity: 80%;
+    color: white;
+    background-color: linear-gradient(to right, #B38728, #B38728, #FBF5B7, #AA771C);
+    background-image: none;
+    
+}
+
+
+
+
+/* ------------------------------- */
+
+#naam, #bericht  {
+    font-size: 200%;
+ 
+}
+input[type="text"] {
+    font-family: 'Lobster', sans-serif;
+}
+#postDiv {
+    margin-top: 15%;
+    /* margin-left: 3%; */
+    width: 50%;
+    font-family: 'Lobster', sans-serif;
+    position: fixed;
+    /* color: goldenrod; */
+    text-align: center;
+    background-image: linear-gradient(to left, #B38728,  #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: solid 3px black;
+}
+#formDiv {
+    background-image: linear-gradient(#1973d1, #010280, #135cc5);
+}
+#verstuurBericht {
+    display: block;
+}
+#verstuurButton {
+    color: #000080;
+    background-image: linear-gradient(to left, #B38728,  #B38728, #FBF5B7, #AA771C);
+    border-color: #000080;
+    height: 100%;
+    width: 50%;
+    margin: 30px 0 10px 0;
+     font-family: 'Lobster', sans-serif;
+
+}
+article {
+    background-image: url("images/153575e1125a6b4fa3a397c71a880bf6.jpg");
+    background-size: cover;
+    /* border: 2px solid pink; */
+    resize: both;
+    margin: 5px 5px 50px 5px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    
+    
+    /* height: 250px; */
+}
+aside {
+    max-width: 45%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: 3%;
+    
+
+}
+#messageDiv {
+  width: 70%;
+  
+  padding: 0 3px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: 17%;
+  margin-top: 10%;
+    /* background-image: linear-gradient(to left, #B38728, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#messageName, #message {
+    overflow: scroll;
+
+    
+}
+#nameArea, #textArea {
+    font-family: inherit;
+    width: 50%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+#messageName {
+    padding-top: 30px;
+}
+#message {
+    margin-top: -15px;
+    overflow: scroll;
+    max-height: 45%;
+}
+#messages {
+    padding-top: 60px;
+}
+#deletebutton {
+    background-image: url( 
+        'images/delete.jpg'); 
+        text-indent: -9999px;
+        background-size: cover; 
+        background-color: transparent;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 2rem; 
+                    resize: both;
+                    border: none;
+                  float: inline-end;
+                  display: block;
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                  margin-top: -150px;
+
+   
+
+
+    
+}
+/* ----------------------------------------- */
+
+#footer {
+    z-index: 1;
+    /* background-color: white; */
+    background-image: url("images/bluebackground.jpg");
+   background-size: cover;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    color: #e5b45f;
+    text-align: center;
+    width: 100%;
+    margin-left: -10px;
+    padding-right: 5px;
+    font-size: 6px;
+}
