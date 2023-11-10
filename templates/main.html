@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html lang="nl">
     <head>
+        <link rel="stylesheet" type="text/css" href="style.css" /> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lobster&display=swap" rel="stylesheet"> 
+<link href="vendor/emoji-picker/lib/css/emoji.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Satisfy&display=swap" rel="stylesheet">
+
         <title>Gastenboek</title>
     </head>
     <body>
-        <main>{content}</main>
+                <header>
+        <h1 id="guestbook"> Gastenboek </h1>
+        <div id="navdiv">
+        <nav> 
+            <button> Home </button>
+            <button> Gastenboek </button>
+            <button> Photos & Videos </button>
+            <button> Something </button>   
+        </nav>
+        </div>  
+        </header>
+        <main>
+            <h2 id="berichtAchterlaten">Laat een bericht achter!</h2>
+            <div>
+                {form}
+            </div>
+            <aside>
+            <div id="messages">
+                {messages}
+            </div>
+            </aside>
+
+
+        </main>
+
+
+
+
+        <footer id="footer">
+            <p> Copyright </p>
+        </footer>
     </body>
 </html> 

@@ -1,17 +1,12 @@
-<?php    
+ <?php    
     class SingleMessage implements Message {
         public string $name;
         public string $comment;
         public string $id;
 
         private function addDeleteButton(): string {
-            // rename session key when login is implemented
-            if (isset($_SESSION["admin"])) {
                 $template = file_get_contents("./templates/deleteButton.html", true);
                 return str_replace("{id}", $this->id, $template);
-            }
-            
-            return "";
         }
 
         public function displayMessage(): string
@@ -34,4 +29,4 @@
             $this->id = $id;
         }
     }
-?>
+?> 
