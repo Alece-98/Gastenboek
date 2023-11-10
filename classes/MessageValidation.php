@@ -8,7 +8,7 @@
             $nameLength = strlen($name);
             
             if($nameLength < $min || $nameLength > $max) {
-                $this->errors["name"] = "Naam moet tussen de 3 en 50 karakters zijn";
+                $this->errors["name"] = "&#128308; Naam moet tussen de 3 en 50 karakters zijn! &#128308;";
             }
         }
 
@@ -18,7 +18,7 @@
             $commentLength = strlen($comment);
             
             if($commentLength < $min || $commentLength > $max){
-                $this->errors["comment"] = "Bericht moet tussen de 3 en 256 karakters zijn";
+                $this->errors["comment"] = "&#128308; Bericht moet tussen de 3 en 256 karakters zijn! &#128308;";
             }
         }
 

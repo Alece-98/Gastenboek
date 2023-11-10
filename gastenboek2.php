@@ -33,18 +33,19 @@
     function displayGuestbook($fileInput): void {
         $output = "";
         foreach ($fileInput as $guestMessage) {
-            echo "<article>" ,"</form>",
-            "<div id='messageDiv'><h2 id='messageName'>",
-            $guestMessage["name"],
-            "</h2>",
-            "<p id='message'>",
-            $guestMessage["message"],
-            "</p></div>",
-            "<form id='deletebutton' method='post'>",
-            "<button name='remove'id='deletebutton' title='Verwijder' type='submit' value='",
-            $guestMessage["id"],
-            "'>X</button >",
-            "</article>";
+            $output .= "<article>";
+            $output .= "<h2>";
+            $output .= $guestMessage["name"];
+            $output .= "</h2>";
+            $output .= "<p>";
+            $output .= $guestMessage["message"];
+            $output .= "</p>";
+            $output .= "<form method='post'>";
+            $output .= "<button name='remove' type='submit' value='";
+            $output .= $guestMessage["id"];
+            $output .= "'>verwijder</button>";
+            $output .= "</form>";
+            $output .= "</article>";
         }
         echo $output;
     }
