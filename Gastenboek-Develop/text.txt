@@ -1,0 +1,11 @@
+Waar ophalen - main     -check of naam en bericht ingevuld zijn, zo ja dan naar guestbookfile.php function validateMessage (htmlspecial chars zet speciale characters i.e'' () of {} om naar html code om die characters te laten zien als text), -messageValidationClass.php - controleerd de lengte van de text in dit geval 3 tot 50 voor naam en 3 tot 256 voor bericht zo niet dan error bericht. als text goed is dan krijg je text terug in comment box. - guestbookfile.php function createMessage()- 
+createMessage haalt naam, bericht en maakt een ID aan en slaat op in de array bestand -writeFile()- 
+waar opslaan -guestbookfile function openfile - wat we opslaan naar json , controleer of bestand bestaat so niet maak json bestand aan, haal alles uit bestand en zet in array
+ waar posten -guestbookpage.php displayPage() - vervangt de {form} en {messages} in de html met alle berichten in de json als er berichten zijn. -displayForm()- is de foutmelding text
+
+-guestbookpage.php displayMessages()- maakt eigenlijk elke keer een nieuw bericht boxje aan, begint met legen string, haalt alle berichten op uit de array en voor elk bericht maakt die nieuw article aan. message html. 
+deletebutton/removemessage refreshed the pagina om bericht te laten zien. kijkt naar de ID van het bericht en verwijdered die uit het array slaat op en refreshed de pagina om het bericht niet te laten zien.
+
+Paginas 
+emojis
+Rollen zoals admin om berichten te verwijderen
